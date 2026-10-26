@@ -213,6 +213,23 @@
       "path": "covers/u1.jpg"
      },
      "id": "u1"
+    },
+    {
+     "title": "\"Театр на уроці Літературного читання\"",
+     "tag": "Інше",
+     "date": "2025-11-03",
+     "desc": "",
+     "link": "",
+     "file": {
+      "path": "files/05l88bt-teatr-na-urotsi-chytannia.pdf",
+      "name": "Театр на уроці читання.pdf",
+      "size": 557928,
+      "type": "application/pdf"
+     },
+     "cover": {
+      "path": "covers/05l88bt.jpg"
+     },
+     "id": "05l88bt"
     }
    ]
   },
