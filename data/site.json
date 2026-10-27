@@ -920,6 +920,10 @@
      "id": "s12l7hu"
     }
    ]
+  },
+  "tth11vkc": {
+   "intro": "",
+   "items": []
   }
  },
  "tabs": [
@@ -978,6 +982,15 @@
    "color": "lav",
    "icon": "globe",
    "key": "tx5xmhkc"
+  },
+  {
+   "label": "Нормативні документи",
+   "short": "",
+   "tagLabel": "Категорія",
+   "color": "lav",
+   "icon": "star",
+   "cover": null,
+   "key": "tth11vkc"
   }
  ],
  "site": {
