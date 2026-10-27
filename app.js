@@ -177,16 +177,16 @@ function cardHtml(key,it,anyCover){
 function sectionHtml(key){
   var s=T(key), sec=state.sections[key];
   var items=(sec.items||[]).slice().sort(function(a,b){ return (b.date||'').localeCompare(a.date||''); });
-  var tags=tagsOf(key); var f=filters[key]||'all';
+  var custom=filtersOf(key), tags=custom||tagsOf(key); var f=filters[key]||'all';
   if(f!=='all' && tags.indexOf(f)<0) f='all';
   var shown = f==='all'?items:items.filter(function(it){ return (it.tag||'Інше')===f; });
   var anyCov = shown.some(function(it){ return !!it.cover; });
-  var chips = tags.length>1 ? '<div class="chips" role="group" aria-label="Фільтр"><button class="chip" data-action="filter" data-sec="'+esc(key)+'" data-tag="all" aria-pressed="'+(f==='all')+'">Усі <span class="n">'+items.length+'</span></button>'+
+  var chips = (custom||tags.length>1) ? '<div class="chips" role="group" aria-label="Фільтр"><button class="chip" data-action="filter" data-sec="'+esc(key)+'" data-tag="all" aria-pressed="'+(f==='all')+'">Усі <span class="n">'+items.length+'</span></button>'+
     tags.map(function(t){ var n=items.filter(function(it){return (it.tag||'Інше')===t;}).length; return '<button class="chip" data-action="filter" data-sec="'+esc(key)+'" data-tag="'+esc(t)+'" aria-pressed="'+(f===t)+'">'+esc(t)+' <span class="n">'+n+'</span></button>'; }).join('')+'</div>' : '';
   var body = shown.length ? '<div class="cards">'+shown.map(function(it){ return cardHtml(key,it,anyCov); }).join('')+'</div>'
     : '<div class="empty">'+ic(s.icon,28)+'<span>Тут поки порожньо. Матеріали з’являться найближчим часом.</span>'+(editMode?'<button class="pill dark" data-action="add-item" data-sec="'+esc(key)+'">'+ic('plus',16)+'Додати перший матеріал</button>':'')+'</div>';
   return '<section class="page-head">'+(s.cover?'<div class="ph-cover"><img src="'+esc(coverUrl(s.cover))+'" alt=""></div>':'')+'<span class="eyebrow">Розділ</span><h1>'+esc(s.label)+'</h1>'+(sec.intro?'<p class="intro">'+esc(sec.intro)+'</p>':'')+
-    (editMode?'<div class="actions"><button class="pill dark" data-action="add-item" data-sec="'+esc(key)+'">'+ic('plus',16)+'Додати матеріал</button>'+(items.some(canAutoCover)?'<button class="pill" data-action="auto-covers" data-sec="'+esc(key)+'">'+ic('image',15)+'Обкладинки з PDF</button>':'')+eb('edit-tab','data-sec="'+esc(key)+'"','Редагувати вкладку')+eb('del-tab','data-sec="'+esc(key)+'"','Видалити вкладку','danger')+'</div>':'')+
+    (editMode?'<div class="actions"><button class="pill dark" data-action="add-item" data-sec="'+esc(key)+'">'+ic('plus',16)+'Додати матеріал</button>'+(items.some(canAutoCover)?'<button class="pill" data-action="auto-covers" data-sec="'+esc(key)+'">'+ic('image',15)+'Обкладинки з PDF</button>':'')+'<button class="pill" data-action="edit-filters" data-sec="'+esc(key)+'">'+ic('list',15)+'Фільтри</button>'+eb('edit-tab','data-sec="'+esc(key)+'"','Редагувати вкладку')+eb('del-tab','data-sec="'+esc(key)+'"','Видалити вкладку','danger')+'</div>':'')+
     '</section><section>'+chips+body+'</section>';
 }
 
@@ -448,6 +448,24 @@ function siteForm(){
   });
 }
 
+/* ---------- filters (categories) per tab ---------- */
+function filtersOf(key){ var t=T(key); return t && Array.isArray(t.filters) ? t.filters : null; }
+function filtersForm(key){
+  var t=T(key); if(!t) return;
+  var cur=filtersOf(key)||tagsOf(key);
+  var unused=tagsOf(key).filter(function(x){ return cur.indexOf(x)<0; });
+  var body='<form id="f-flt" class="dlg-body"><p style="color:var(--ink-2);font-size:13.5px">Ці кнопки показуються над матеріалами у вкладці «'+esc(t.label)+'». Кнопка <b>«Усі»</b> є завжди. Щоб залишити тільки її, очистіть поле.</p>'+
+    field('fl-list','Фільтри (кожен з нового рядка)',cur.join('\n'),{area:true,rows:7,hint:'Додайте рядок, щоб з’явився новий фільтр. Видаліть рядок, щоб прибрати фільтр. Порядок рядків стане порядком кнопок.'})+
+    (unused.length?'<p class="hint" style="font-size:12.5px;color:var(--ink-2)">Категорії, які вже є в матеріалах цієї вкладки, але не показані як фільтри: '+unused.map(esc).join(', ')+'.</p>':'')+
+    '<p class="hint" style="font-size:12.5px;color:var(--ink-2)">Щоб матеріал потрапив у фільтр, відкрийте його олівцем і в полі «'+esc(t.tagLabel||'Категорія')+'» напишіть точно таку саму назву.</p>'+
+    '<p class="form-msg" role="alert"></p></form>';
+  var o=openModal('Фільтри вкладки',body,footBtns('f-flt'),true);
+  o.querySelector('form').addEventListener('submit',function(e){ e.preventDefault();
+    var seen={}, list=e.target.querySelector('#fl-list').value.split('\n').map(function(x){ return x.trim(); }).filter(function(x){ if(!x||seen[x.toLowerCase()]||x.toLowerCase()==='усі') return false; seen[x.toLowerCase()]=1; return true; });
+    save(function(n){ var tt=n.tabs.find(function(x){ return x.key===key; }); if(tt) tt.filters=list; },'Фільтри вкладки «'+t.label+'»').then(function(ok){ if(ok){ filters[key]='all'; render(); } });
+  });
+}
+
 /* ---------- forms: tabs ---------- */
 function tabForm(key){
   var t=key?T(key):null; var isNew=!t;
@@ -520,7 +538,7 @@ function tabsManager(){
 function itemForm(key,id){
   var s=T(key); var it=id?(state.sections[key].items||[]).find(function(x){return x.id===id;}):null;
   it=it||{id:'',title:'',desc:'',tag:'',date:new Date().toISOString().slice(0,10),link:'',file:null};
-  var tags=tagsOf(key);
+  var tags=filtersOf(key)||tagsOf(key);
   var cur = it.file ? '<div class="cur-file">'+ic('file',16)+'<span style="flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">'+esc(it.file.name)+' · '+fsize(it.file.size)+'</span><label style="display:flex;gap:6px;align-items:center;font-size:13px"><input type="checkbox" id="it-rm"> видалити файл</label></div>' : '';
   var tabOpts=state.tabs.map(function(t){ return [t.key,t.label]; });
   var body='<form id="f-item" class="dlg-body">'+field('it-title','Назва',it.title,{required:true})+
@@ -713,6 +731,7 @@ document.addEventListener('click',function(e){
   else if(a==='tabs-manager') tabsManager();
   else if(a==='new-tab') tabForm(null);
   else if(a==='edit-tab') tabForm(sec);
+  else if(a==='edit-filters') filtersForm(sec);
   else if(a==='auto-covers') autoCovers(sec);
   else if(a==='del-tab') delTab(sec);
   else if(a==='add-item') itemForm(sec,null);
