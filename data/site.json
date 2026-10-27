@@ -49,15 +49,6 @@
    "intro": "Презентації, картки, робочі аркуші та ігри, які я використовую на уроках. Можна брати для занять удома або для власних уроків.",
    "items": [
     {
-     "id": "u4",
-     "title": "Казки Василя Сухомлинського: аркуш читача",
-     "desc": "Аркуш для роботи з текстом: головні герої, послідовність подій, мій висновок.",
-     "tag": "Читання",
-     "date": "2026-09-26",
-     "link": "",
-     "file": null
-    },
-    {
      "id": "u5",
      "title": "Таблиця множення: тренажер-розмальовка",
      "desc": "Розмальовка, де колір кожної ділянки залежить від правильної відповіді. Діти обожнюють!",
@@ -164,23 +155,6 @@
      "id": "51c7nky"
     },
     {
-     "title": "\"Дивовижний світ материків та океанів\"",
-     "tag": "Інше",
-     "date": "2026-03-11",
-     "desc": "",
-     "link": "",
-     "file": {
-      "path": "files/fwu83w1-dyvovyzhnyi-svit-materykiv-ta-okeaniv.pdf",
-      "name": "Дивовижний світ материків та океанів.pdf",
-      "size": 710495,
-      "type": "application/pdf"
-     },
-     "cover": {
-      "path": "covers/fwu83w1.jpg"
-     },
-     "id": "fwu83w1"
-    },
-    {
      "title": "\"Мандруємо світом поезії\"",
      "tag": "Читання",
      "date": "2026-01-23",
@@ -215,8 +189,42 @@
      "id": "u1"
     },
     {
+     "title": "\"Орієнтування на місцевості\"",
+     "tag": "Я досліджую світ",
+     "date": "2025-09-12",
+     "desc": "",
+     "link": "",
+     "file": {
+      "path": "files/79ehh2l-oriientuvannia-na-mistsevosti.pdf",
+      "name": "Орієнтування на місцевості.pdf",
+      "size": 813452,
+      "type": "application/pdf"
+     },
+     "cover": {
+      "path": "covers/79ehh2l.jpg"
+     },
+     "id": "79ehh2l"
+    },
+    {
+     "title": "\"Дивовижний світ материків та океанів\"",
+     "tag": "Я досліджую світ",
+     "date": "2026-03-11",
+     "desc": "",
+     "link": "",
+     "file": {
+      "path": "files/fwu83w1-dyvovyzhnyi-svit-materykiv-ta-okeaniv.pdf",
+      "name": "Дивовижний світ материків та океанів.pdf",
+      "size": 710495,
+      "type": "application/pdf"
+     },
+     "cover": {
+      "path": "covers/fwu83w1.jpg"
+     },
+     "id": "fwu83w1"
+    },
+    {
      "title": "\"Театр на уроці Літературного читання\"",
-     "tag": "Інше",
+     "tag": "Читання",
      "date": "2025-11-03",
      "desc": "",
      "link": "",
@@ -230,6 +238,108 @@
       "path": "covers/05l88bt.jpg"
      },
      "id": "05l88bt"
+    },
+    {
+     "title": "\"Досліджуємо будову слова\"",
+     "tag": "Українська мова",
+     "date": "2025-10-06",
+     "desc": "",
+     "link": "",
+     "file": {
+      "path": "files/9oizl6w-doslidzhuiemo-budovu-slova.pdf",
+      "name": "Досліджуємо будову слова.pdf",
+      "size": 580436,
+      "type": "application/pdf"
+     },
+     "cover": {
+      "path": "covers/9oizl6w.jpg"
+     },
+     "id": "9oizl6w"
+    },
+    {
+     "title": "\"Наталя Осипчук п'єса-казка \"Стрімкий, як вітер\"",
+     "tag": "Читання",
+     "date": "2025-03-04",
+     "desc": "",
+     "link": "",
+     "file": {
+      "path": "files/kf5h75x-urok-literaturnoho-chytannia.pdf",
+      "name": "Урок літературного читання.pdf",
+      "size": 713242,
+      "type": "application/pdf"
+     },
+     "cover": {
+      "path": "covers/kf5h75x.jpg"
+     },
+     "id": "kf5h75x"
+    },
+    {
+     "title": "\"Магія рідного слова\"",
+     "tag": "Українська мова",
+     "date": "2024-10-25",
+     "desc": "",
+     "link": "",
+     "file": {
+      "path": "files/idlm2qh-mahiia-ridnoho-slova.pdf",
+      "name": "Магія рідного слова.pdf",
+      "size": 227121,
+      "type": "application/pdf"
+     },
+     "cover": {
+      "path": "covers/idlm2qh.jpg"
+     },
+     "id": "idlm2qh"
+    },
+    {
+     "title": "Урок образотворчого мистецтва \"Наші маленькі друзі\"",
+     "tag": "Читання",
+     "date": "2024-10-11",
+     "desc": "",
+     "link": "",
+     "file": {
+      "path": "files/u4-nashi-malenki-druzi.pdf",
+      "name": "Наші маленькі друзі.pdf",
+      "size": 207178,
+      "type": "application/pdf"
+     },
+     "cover": {
+      "path": "covers/u4.jpg"
+     },
+     "id": "u4"
+    },
+    {
+     "title": "Урок образотворчого мистецтва \"Створюємо аплікацію\"",
+     "tag": "Інше",
+     "date": "2024-09-26",
+     "desc": "",
+     "link": "",
+     "file": {
+      "path": "files/1rzvs7d-stvoriuiemo-aplikatsiiu.pdf",
+      "name": "Створюємо аплікацію.pdf",
+      "size": 224639,
+      "type": "application/pdf"
+     },
+     "cover": {
+      "path": "covers/1rzvs7d.jpg"
+     },
+     "id": "1rzvs7d"
+    },
+    {
+     "title": "Урок Я досліджую світ \"Театр тіней\"",
+     "tag": "Інше",
+     "date": "2024-05-01",
+     "desc": "",
+     "link": "",
+     "file": {
+      "path": "files/e4qkbby-teatr-tinei.pdf",
+      "name": "Театр тіней.pdf",
+      "size": 174397,
+      "type": "application/pdf"
+     },
+     "cover": {
+      "path": "covers/e4qkbby.jpg"
+     },
+     "id": "e4qkbby"
     }
    ]
   },
@@ -296,6 +406,40 @@
       "path": "covers/88apfpq.jpg"
      },
      "id": "88apfpq"
+    },
+    {
+     "title": "Всеукраїнський конкурс малюнків \"Поважай. Розумій. Будь вдячним\"",
+     "tag": "Інше",
+     "date": "2025-01-13",
+     "desc": "",
+     "link": "",
+     "file": {
+      "path": "files/3koehan-konkurs-maliunkiv.pdf",
+      "name": "Конкурс малюнків.pdf",
+      "size": 778826,
+      "type": "application/pdf"
+     },
+     "cover": {
+      "path": "covers/3koehan.jpg"
+     },
+     "id": "3koehan"
+    },
+    {
+     "title": "Всеукраїнська благодійна акція \"#SuperCoins\"",
+     "tag": "Інше",
+     "date": "2025-01-13",
+     "desc": "",
+     "link": "",
+     "file": {
+      "path": "files/k4hkvt2-vseukrainska-blahodiina-aktsiia.jpg",
+      "name": "Всеукраїнська благодійна акція.jpg",
+      "size": 84805,
+      "type": "image/jpeg"
+     },
+     "cover": {
+      "path": "covers/k4hkvt2.jpg"
+     },
+     "id": "k4hkvt2"
     }
    ]
   },
@@ -318,18 +462,6 @@
      "cover": {
       "path": "covers/d2.jpg"
      }
-    },
-    {
-     "title": "Всеукраїнський конкурс \"Учитель року - 2026\", номінація \"Початкова освіта\"",
-     "tag": "Інше",
-     "date": "",
-     "desc": "",
-     "link": "",
-     "file": null,
-     "cover": {
-      "path": "covers/d1.jpg"
-     },
-     "id": "d1"
     },
     {
      "title": "Подяка за плідну співпрацю з Глухівським національним педагогічним університетом імені Олександра Довженка",
@@ -364,6 +496,18 @@
       "path": "covers/d4.jpg"
      },
      "id": "d4"
+    },
+    {
+     "title": "Всеукраїнський конкурс \"Учитель року - 2026\", номінація \"Початкова освіта\"",
+     "tag": "Інше",
+     "date": "",
+     "desc": "",
+     "link": "",
+     "file": null,
+     "cover": {
+      "path": "covers/d1.jpg"
+     },
+     "id": "d1"
     }
    ]
   },
@@ -570,6 +714,210 @@
       "path": "covers/ggz0fvo.jpg"
      },
      "id": "ggz0fvo"
+    },
+    {
+     "title": "\"27 жовтня День української писемності та мови\"",
+     "tag": "Інше",
+     "date": "2025-10-27",
+     "desc": "",
+     "link": "",
+     "file": {
+      "path": "files/2cem1bk-27-zhovtnia.pdf",
+      "name": "27 жовтня.pdf",
+      "size": 634224,
+      "type": "application/pdf"
+     },
+     "cover": {
+      "path": "covers/2cem1bk.jpg"
+     },
+     "id": "2cem1bk"
+    },
+    {
+     "title": "\"Дитячі серця - захисникам\"",
+     "tag": "Інше",
+     "date": "2025-10-01",
+     "desc": "",
+     "link": "",
+     "file": {
+      "path": "files/9ugikwy-dytiachi-sertsia-zakhysnykam.pdf",
+      "name": "Дитячі серця - захисникам.pdf",
+      "size": 4406610,
+      "type": "application/pdf"
+     },
+     "cover": {
+      "path": "covers/9ugikwy.jpg"
+     },
+     "id": "9ugikwy"
+    },
+    {
+     "title": "\"З днем знань!\"",
+     "tag": "Інше",
+     "date": "2025-09-02",
+     "desc": "",
+     "link": "",
+     "file": {
+      "path": "files/wp5e5o7-z-dnem-znan.pdf",
+      "name": "З днем знань.pdf",
+      "size": 1000820,
+      "type": "application/pdf"
+     },
+     "cover": {
+      "path": "covers/wp5e5o7.jpg"
+     },
+     "id": "wp5e5o7"
+    },
+    {
+     "title": "\"Зі святом останнього дзвоника\"",
+     "tag": "Інше",
+     "date": "2025-05-30",
+     "desc": "",
+     "link": "",
+     "file": {
+      "path": "files/wag1n4d-zi-sviatom-ostannoho-dzvonyka.pdf",
+      "name": "Зі святом останнього дзвоника.pdf",
+      "size": 4849584,
+      "type": "application/pdf"
+     },
+     "cover": {
+      "path": "covers/wag1n4d.jpg"
+     },
+     "id": "wag1n4d"
+    },
+    {
+     "title": "\"З вишиванкою в серці\"",
+     "tag": "Інше",
+     "date": "2025-05-14",
+     "desc": "",
+     "link": "",
+     "file": {
+      "path": "files/kt3lgni-z-vyshyvankoiu-v-sertsi.pdf",
+      "name": "З вишиванкою в серці.pdf",
+      "size": 838549,
+      "type": "application/pdf"
+     },
+     "cover": {
+      "path": "covers/kt3lgni.jpg"
+     },
+     "id": "kt3lgni"
+    },
+    {
+     "title": "\"Портрет матусі\"",
+     "tag": "Інше",
+     "date": "2025-05-09",
+     "desc": "",
+     "link": "",
+     "file": {
+      "path": "files/vduytho-portret-matusi.pdf",
+      "name": "Портрет матусі.pdf",
+      "size": 819787,
+      "type": "application/pdf"
+     },
+     "cover": {
+      "path": "covers/vduytho.jpg"
+     },
+     "id": "vduytho"
+    },
+    {
+     "title": "\"Великодня майстерня\"",
+     "tag": "Інше",
+     "date": "2025-04-18",
+     "desc": "",
+     "link": "",
+     "file": {
+      "path": "files/art1ibo-velykodnia-maisternia.pdf",
+      "name": "Великодня майстерня.pdf",
+      "size": 895015,
+      "type": "application/pdf"
+     },
+     "cover": {
+      "path": "covers/art1ibo.jpg"
+     },
+     "id": "art1ibo"
+    },
+    {
+     "title": "\"Нове життя пластику\"",
+     "tag": "Інше",
+     "date": "2025-04-16",
+     "desc": "",
+     "link": "",
+     "file": {
+      "path": "files/49x7iph-nove-zhyttia-plastyku.pdf",
+      "name": "Нове життя пластику.pdf",
+      "size": 702376,
+      "type": "application/pdf"
+     },
+     "cover": {
+      "path": "covers/49x7iph.jpg"
+     },
+     "id": "49x7iph"
+    },
+    {
+     "title": "\"Весняний майстер-клас\"",
+     "tag": "Інше",
+     "date": "2025-03-06",
+     "desc": "",
+     "link": "",
+     "file": {
+      "path": "files/z5d2aza-vesnianyi-maister-klas.jpg",
+      "name": "Весняний майстер клас.jpg",
+      "size": 170540,
+      "type": "image/jpeg"
+     },
+     "cover": {
+      "path": "covers/z5d2aza.jpg"
+     },
+     "id": "z5d2aza"
+    },
+    {
+     "title": "Майстер-клас \"Новорічна іграшка\"",
+     "tag": "Інше",
+     "date": "2024-12-27",
+     "desc": "",
+     "link": "",
+     "file": {
+      "path": "files/w0gi3uz-novorichna-ihrashka.pdf",
+      "name": "Новорічна іграшка.pdf",
+      "size": 246277,
+      "type": "application/pdf"
+     },
+     "cover": {
+      "path": "covers/w0gi3uz.jpg"
+     },
+     "id": "w0gi3uz"
+    },
+    {
+     "title": "\"Новорічна вистава\"",
+     "tag": "Інше",
+     "date": "2024-12-11",
+     "desc": "",
+     "link": "",
+     "file": {
+      "path": "files/75gmszf-novorichna-vystava.pdf",
+      "name": "Новорічна вистава.pdf",
+      "size": 202358,
+      "type": "application/pdf"
+     },
+     "cover": {
+      "path": "covers/75gmszf.jpg"
+     },
+     "id": "75gmszf"
+    },
+    {
+     "title": "Майстер-клас \"Святкові прянички\"",
+     "tag": "Інше",
+     "date": "2024-12-05",
+     "desc": "",
+     "link": "",
+     "file": {
+      "path": "files/s12l7hu-sviatkovi-prianychky.pdf",
+      "name": "Святкові прянички.pdf",
+      "size": 235933,
+      "type": "application/pdf"
+     },
+     "cover": {
+      "path": "covers/s12l7hu.jpg"
+     },
+     "id": "s12l7hu"
     }
    ]
   }
