@@ -314,7 +314,10 @@
       "size": 7184618,
       "type": "application/pdf"
      },
-     "id": "d2"
+     "id": "d2",
+     "cover": {
+      "path": "covers/d2.jpg"
+     }
     },
     {
      "title": "Всеукраїнський конкурс \"Учитель року - 2026\", номінація \"Початкова освіта\"",
@@ -340,7 +343,9 @@
       "size": 807673,
       "type": "application/pdf"
      },
-     "cover": null,
+     "cover": {
+      "path": "covers/d3.jpg"
+     },
      "id": "d3"
     },
     {
@@ -355,7 +360,9 @@
       "size": 502642,
       "type": "application/pdf"
      },
-     "cover": null,
+     "cover": {
+      "path": "covers/d4.jpg"
+     },
      "id": "d4"
     }
    ]

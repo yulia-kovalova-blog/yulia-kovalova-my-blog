@@ -563,14 +563,15 @@ function itemForm(key,id){
       if(cpick) return compressImage(cpick,800).then(storeCover).catch(function(){ return oldCover; });
       if(rmc&&rmc.checked) return Promise.resolve(null);
       if(oldCover) return Promise.resolve(oldCover);
-      if(pick && file){ var k=fileKind(file);
-        if(k==='PDF') return pdfCoverFromBlob(pick).then(storeCover).catch(function(){ return null; });
-        if(k==='Зображення') return compressImage(pick,800).then(storeCover).catch(function(){ return null; }); }
+      if(file){ var k=fileKind(file);
+        if(k==='PDF'||k==='Зображення'){
+          var src=pick?Promise.resolve(pick):fileBlob(file);
+          return src.then(function(blob){ return k==='PDF'?pdfCoverFromBlob(blob):compressImage(blob,800); }).then(storeCover).catch(function(){ return null; }); } }
       return Promise.resolve(null);
     }
     var finish=function(file){
       if(oldFile && (!file || file.path!==oldFile.path)) dropAsset(oldFile);
-      if(cpick || (pick && !oldCover)) setBusy('Готую обкладинку…');
+      if(cpick || (!oldCover && file && !(rmc&&rmc.checked) && (fileKind(file)==='PDF'||fileKind(file)==='Зображення'))) setBusy('Готую обкладинку…');
       makeCover(file).then(function(cover){ setBusy(null); if(oldCover && cover!==oldCover) dropCover(oldCover);
       save(function(n){ var rec=Object.assign({},v,{file:file||null,cover:cover||null});
         if(id){ rec.id=id; n.sections[key].items=n.sections[key].items.filter(function(x){return x.id!==id;}); }
